@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  twitter:
+    lang: python
+    handler: ./twitter
+    image: nouchka/twitter
+    environment_file:
+      - .env
